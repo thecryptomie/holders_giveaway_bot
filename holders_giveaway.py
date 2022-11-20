@@ -31,7 +31,9 @@ bot = commands.Bot(
 _HOLDERS_DATA = HoldersGiveaway(config_file='./config.yaml')
 
 async def admin_check(ctx):
-    admin_role_id = _HOLDERS_DATA.config['admin_role'][1]
+    admin_role_id = _HOLDERS_DATA.config['admin_role']
+    # if the user has the project's admin role, it will return it
+    # other wise it returns none
     role = ctx.author.get_role(admin_role_id)
     if isinstance(role, discord.Role):
         return True
