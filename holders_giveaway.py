@@ -120,7 +120,7 @@ async def giveaway(ctx):
         inline=False
     )
     embed.add_field(
-        name='Tourists Holdings',
+        name='Tourist Holdings',
         value=count,
         inline=False
     )
